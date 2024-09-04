@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #def9C4;
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #50B498;
+    color: #00712d;
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    font-size: larger;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul img {
+    height: 40px;
+    position: absolute;
+    justify-self: start;
+    left: 20px;
+    right: auto;
+    image-resolution: 100%;
+
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    color: #114928;
+    user-select: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav a:hover {
+    background-color: #9CDBa6;
+    border-radius: 50px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #50B498;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.sidebar li :hover {
+    background-color: #9CDBa6;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 900px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media(max-width: 300px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* Hide loader by default */
+.loader {
+    display: none;
+    /* Hide loader initially */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    /* Light grey */
+    border-top: 5px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Hide content initially */
+.hidden-content {
+    display: none;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Welcome Page Section */
+.welcome {
+    background-image: url('images/welcome-bg.jpg');
+    /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.welcome::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.welcome-description {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cssbuttons-io-button {
+    background: #1a8f64;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+    background: #def9C4;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #00ffb7;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #000000;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+main {
+    padding-top: 8vh;
+}
+
+
+/*Body Part*/
+.home {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.left-home {
+    left: 0;
+    width: 20%;
+    background-color: pink;
+    height: 70vh;
+}
+
+.banner {
+    width: 60%;
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
+    height: inherit;
+}
+
+.right-home {
+    right: 0;
+    width: 20%;
+    height: inherit;
+    background-color: pink;
+}
+
+.features {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    background-color: yellow;
+}
+
+.userAccess {
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: blue;
+}
+
+.userAccess h1 {
+    display: flex;
+    top: 10px;
+    font-size: smaller;
+    justify-content: center;
+    justify-items: center;
+}
+
+.farmer_login {
+    background-color: beige;
+    height: 65vh;
+    width: 45%;
+}
+
+.retailer_login {
+    background-color: wheat;
+    height: 65vh;
+    width: 45%;
+
+}
+
+.contact {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    background-color: green;
+}

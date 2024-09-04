@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Krishi Setu</title>
+</head>
+
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                            viewBox="0 96 960 960" width="26">
+                            <path
+                                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                        </svg></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Commodities</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contact Support</a></li>
+            </ul>
+            <ul>
+                <img src="/images/logo.png" alt="KrishiSetu">
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">Features</a></li>
+                <li class="hideOnMobile"><a href="#">Commodities</a></li>
+                <li class="hideOnMobile"><a href="#">Login</a></li>
+                <li class="hideOnMobile"><a href="#">Contact Support</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="26" viewBox="0 96 960 960" width="26">
+                            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Page -->
+    <section class="welcome" id="welcome-section">
+        <div class="welcome-content">
+            <h1>Welcome to...</h1>
+            <h1 class="welcome-app-name" style="font-size:400%;font-weight: bold;">Krishi Setu</h1>
+            <p style="margin-top: 20px;margin-bottom: 20px;">Sow seeds of prosperity and harvest dreams , We Grow
+                together and thrive together.</p>
+            <div class="button-container">
+                <button class="cssbuttons-io-button" onclick="toggleContent()">
+                    Get started ...
+                    <div class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loader -->
+    <div id="loader" class="loader hidden-content"></div>
+    <div id="other-content" class="hidden-content"></div>
+
+    <main>
+        <section class="home">
+            <div class="left-home">
+                <p>Left-Home</p>
+            </div>
+
+            <div class="banner">
+                <p>banner</p>
+            </div>
+
+            <div class="right-home">
+                <p>Right-Home</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <p>FEATURES</p>
+        </section>
+
+        <section class="commodities">
+            <P></P>
+        </section>
+
+        <section class="userAccess">
+            <div class="farmer_login">
+                <h1>Farmer's Login</h1>
+            </div>
+
+            <div class="retailer_login">
+                <h1>Retailer's Login</h1>
+            </div>
+
+            <!-- <button onclick="loginRedirect()">Login & Sign-up</button> -->
+        </section>
+
+        <section class="contact">
+            <p>CONTACT</p>
+        </section>
+    </main>
+
+
+    <footer></footer>
+
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
